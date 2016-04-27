@@ -3,7 +3,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+
+  var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+
+  res.render('index', {
+    title: 'API Project: Request Header Parser Microservice',
+    path: fullUrl
+  });
 });
 
 module.exports = router;

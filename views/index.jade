@@ -2,4 +2,19 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Get the IP address, language and operating system informations.
+  p Some properties might be null if it is unreachable.
+  hr
+  .row
+    .col-xs-12
+      pre GET /api
+      p
+        b Example usage
+      p
+        a(href='#{path}api' target='_blank') #{path}api
+      p
+        b Response example
+      code { "ipaddress": "88.227.165.85", "language": "tr-TR", "software": "X11; Linux x86_64" }
+  hr
+  p
+    a(href='https://github.com/hisener/header-parser' target='_blank') Github repository

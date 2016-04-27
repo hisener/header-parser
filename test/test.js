@@ -5,6 +5,7 @@ var server = supertest.agent('http://localhost:3000');
 
 describe('Initial JSON object test', function() {
 
+  // api request with accept-language and user-agent headers.
   it('should return json object contains ip, language and OS', function(done) {
     
     server
@@ -21,4 +22,21 @@ describe('Initial JSON object test', function() {
         done();
       });
   });
+
+  // api request without accept-language and user-agent headers.
+  it('should return json object with null properties', function(done) {
+    
+    server
+      .get('/api')
+      .expect('Content-type', /json/)
+      .expect(200)
+      .end(function(err, res) {
+        assert.equal(200, res.status);
+        assert.notEqual(null, res.body.ipaddress);
+        assert.equal(null, res.body.language);
+        assert.equal(null, res.body.software);
+        done();
+      });
+  });
+  
 });

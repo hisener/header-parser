@@ -1,7 +1,7 @@
 {
   "name": "header-parser",
   "decription": "A http header parser as microservice.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/hisener/header-parser.git"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
@@ -30,7 +30,7 @@
   "author": "Halil İbrahim Şener <hisener@yahoo.com>",
   "licence": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/hisener/header-parser/issues"
   },
-  "homepage": ""
+  "homepage": "http://hisener-header-parser.herokuapp.com/api"
 }
