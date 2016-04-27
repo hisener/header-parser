@@ -1,6 +1,6 @@
 {
   "name": "header-parser",
-  "decription": "A http header parser as microservice.",
+  "description": "A http header parser as microservice.",
   "version": "0.1.0",
   "main": "app.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "http header", "header parser", "api", "microservice", "free code camp"
   ],
   "author": "Halil İbrahim Şener <hisener@yahoo.com>",
-  "licence": "MIT",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hisener/header-parser/issues"
   },
