@@ -8,7 +8,7 @@ module.exports = (req) => {
   if(req.headers['user-agent'])
     software = req.headers['user-agent'].match(/\((.*?)\)/);
   
-  software = (software != null) ? software[1] : null;
+  software = (software !== null) ? software[1] : null;
 
   return {
     "ipaddress": req.ip,
